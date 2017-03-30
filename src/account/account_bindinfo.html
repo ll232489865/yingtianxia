@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"  class="Header1 Account">
+<head>
+    <meta charset="UTF-8">
+    <title>account_info</title>
+</head>
+<link rel="stylesheet" href="../css/include/base.css">
+<link rel="stylesheet" href="../css/include/public.css">
+<link rel="stylesheet" href="../css/include/style.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="../css/module/page.css">
+<link rel="stylesheet" href="../css/module/tab.css">
+<body>
+<div id="header" style="z-index: 10; position: relative"></div>
+
+<div class="Constr">
+    <div class="fix mt20">
+        <div class="l pct20" id="accountbar">
+        </div>
+        <div class="cell pl20">
+            <div class="bdb">
+                <div class="Tt_areaI">
+                    邮箱修改 与 邮箱绑定   
+                </div>
+                <div class="p20">
+                    <form id="myform" method="post" data-rel="myform1">
+                    <div id="Tab_hor_1" class="Tab_panel">
+                            <div class="fix fa mb20">
+                                <div class="l pct30 tr">
+                                    <span class="Ist_tt">
+                                        注意 :
+                                    </span>  
+                                </div>
+                                <div class="cell">
+                                    <div class="lh30">
+                                        <span class="C_1">如果您之前绑定了邮箱，那么这次操作则覆盖之前的邮箱，如果没有，则新加绑定邮箱。</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fix fa mb20">
+                                <div class="l pct30 tr">
+                                    <span class="Ist_tt">
+                                        绑定的邮箱地址 :
+                                    </span>
+                                    
+                                </div>
+                                <div class="cell">
+                                   <input type="text" class="Ist_30 Ist_l" id="email" check="email">
+                                </div>
+                            </div>
+                            <div class="fix fa mb20">
+                                <div class="l pct30 tr">
+                                    &nbsp;
+                                </div>
+                                <div class="cell">
+                                   <span class="Btn_blue Btn_40" id="myform1">
+                                       绑 定
+                                   </span>
+                                </div>
+                            </div>
+                         </form>   
+                            <div class="fix fa mb20 dn" id="bindSuccess">
+                                <div class="l pct30 tr">
+                                    <img src="../css/img/check.png" alt="">
+                                </div>
+                                <div class="cell pl10 pt10 " >
+                                   <b class="C_2">已发送认证邮件至：</b> <br>
+                                   <b class="C_1" id="sendEmail">fenghxfriend@hotmail.com</b><br>
+                                   (邮箱还尚未激活，请立即完成激活)
+                                   验证邮件24小时内有效，请尽快登陆您的邮箱点击激活链接完成激活。
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div id="footer"></div>
+<!--footer end-->
+</body>
+<script data-main="accountBindinfo" src="../js/libs/require.js"></script>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="Header2">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<link rel="stylesheet" href="css/include/base.css">
+<link rel="stylesheet" href="css/include/public.css">
+<style>
+    .login_bg{
+        width: auto;
+        height: 560px;
+        background: url(css/img/login.jpg) no-repeat center #52c6fc;
+        position: relative;
+    }
+    .login_rect{
+        height: 300px; background: #fff; width: 300px; margin-top: 100px; border: 5px solid  rgba(82,198,242,.3); border-radius:5px;
+    }
+    .w204{ width: 204px;}
+</style>
+<body>
+<div id="header2"></div>
+
+<div class="Constr">
+    <div class="p20 mt20">
+        <div class="pct50 auto">
+            <div class="f24 g3">
+                注册会员
+            </div>
+        </div>
+        <form id="myform" method="post" data-rel="myform1">
+            <div class="fix fa mb20 mt30">
+                <div class="l pct30 tr">
+                    <span class="Ist_tt">
+                        手机号码     :
+                    </span>
+                    
+                </div>
+                <div class="cell">
+                    <input type="text" class="Ist_30 Ist_l"  id="mobile" check="mobile">
+                    <span class="C_1 vm">*</span>
+                </div>
+            </div>
+            <div class="fix fa mb20">
+                <div class="l pct30 tr">
+                    <span class="Ist_tt">
+                            验证号 :
+                    </span>
+                </div>
+                <div class="cell">
+                    <input type="text" class="Ist_30 Ist_w" check="required" id="valiCode">
+                    <span class="Btn_blue Btn_30" id="getvali">获取验证码</span>
+                </div>
+            </div>
+            <div class="fix fa mb20">
+                <div class="l pct30 tr">
+                    <span class="Ist_tt" >
+                            密码 :
+                    </span>
+                </div>
+                <div class="cell">
+                    <input type="password" class="Ist_30 Ist_l" check="pwd1 required" id="pasw">
+                    <span class="C_1 vm">*</span>
+                </div>
+            </div>
+            <div class="fix fa mb20">
+                <div class="l pct30 tr">
+                    <span class="Ist_tt">
+                            确认密码 :
+                    </span>
+                </div>
+                <div class="cell">
+                    <input type="password" class="Ist_30 Ist_l" check="pwd2 required">
+                    <span class="C_1 vm">*</span>
+                </div>
+            </div>
+            <div class="fix fa mb20">
+                <div class="l pct30 tr">
+                    <span class="Ist_tt">
+                            &nbsp;
+                    </span>
+                </div>
+                <div class="cell" id='haha'>
+                    <input type="checkbox" check="required" id="ready">
+                    我已阅读并同意
+                    <a href="javascript:" class="C_2">
+                        《营天下用户服务协议》
+                    </a>
+                </div>
+            </div>
+
+        
+        <div class="fix fa mb20">
+            <div class="l pct30 tr">
+                &nbsp;
+            </div>
+            <div class="cell" >
+                <a   id="myform1" class="Btn_green Btn_40">
+                    立即注册
+                </a>
+            </div>
+            
+        </div>
+        <div class="fix fa mb20">
+                <div class="l pct30 tr">
+                    <span class="Ist_tt">
+                            &nbsp;
+                    </span>
+                </div>
+                <div class="cell">
+                    <div id="res_success" style="display: none;">
+                        <h2 style="color:red" class="mb10" >
+                            你已经注册成功，5秒之后会跳转到登录页面
+                        </h2>
+                        <a href="login.html" class="C_2">
+                            直接去登录
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="footer2"></div>
+</body>
+<script data-main="register" src="js/libs/require.js"></script>
+</html>

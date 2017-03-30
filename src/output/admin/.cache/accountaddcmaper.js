@@ -1,0 +1,26 @@
+/*TMODJS:{"version":131,"md5":"18686c7237f93dbbc45b82bd2eca3550"}*/
+template('accountaddcmaper',function($data,$filename
+/**/) {
+'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,list=$data.list,$out='';$out+='<form id="myform" method="post" data-rel="myform1"> <div class="fix fa mb20"> <div class="l pct30 tr"> <span class="Ist_tt" > 姓名 : </span> </div> <div class="cell"> <input type="text" class="Ist_30 Ist_l" id="addcam_name" check="required" value="';
+$out+=$escape(list.name);
+$out+='"> <span class="C_1 vm">*</span> </div> </div> <div class="fix fa mb20"> <div class="l pct30 tr"> <span class="Ist_tt"> 身份证号码 : </span> </div> <div class="cell"> <input type="text" class="Ist_30 Ist_l" id="addcam_sfz" check="idcard" value="';
+$out+=$escape(list.idcard);
+$out+='"> <span class="C_1 vm">*</span> </div> </div> <div class="fix fa mb20"> <div class="l pct30 tr"> <span class="Ist_tt"> 性别 : </span> </div> <div class="cell lh30"> ';
+if(list.gndr==1){
+$out+=' <input type="radio" checked name="sex" data-num="1"> 男 <input type="radio" name="sex" data-num="0"> 女 ';
+}else{
+$out+=' <input type="radio" name="sex" data-num="1"> 男 <input type="radio" checked name="sex" data-num="0"> 女 ';
+}
+$out+=' </div> </div> <div class="fix fa mb20"> <div class="l pct30 tr"> <span class="Ist_tt"> 身份 : </span> </div> <div class="cell lh30"> ';
+if(list.type==1){
+$out+=' <input type="radio" checked name="type" data-num="1"> 学生 <input type="radio" name="type" data-num="0"> 家长 ';
+}else{
+$out+=' <input type="radio" name="type" data-num="1"> 学生 <input type="radio" checked name="type" data-num="0"> 家长 ';
+}
+$out+=' </div> </div> <div class="fix fa mb20"> <div class="l pct30 tr"> <span class="Ist_tt"> 备注(有无重大疾病,饮食禁忌及过敏) </span> </div> <div class="cell"> <textarea name="" class="textarea" id="addcam_tips" cols="42" rows="5"></textarea> </div> </div> <div class="fix fa mb20"> <div class="l pct30 tr"> <span class="Ist_tt"> 护照号码 : </span> </div> <div class="cell"> <input type="text" class="Ist_30 Ist_l" id="addcam_hznb"> </div> </div> <div class="fix fa mb20"> <div class="l pct30 tr"> <span class="Ist_tt"> 护照国籍 : </span> </div> <div class="cell"> <span class="Downlist Downlist_36 w140" data-rel="Downlistdown1" data-out="true"> <span class="Downlist_w"> 中国 </span> <span class="Trigon"> </span> </span> </div> </div> <div class="fix fa mb20"> <div class="l pct30 tr"> <span class="Ist_tt"> 护照有效期 : </span> </div> <div class="cell"> <input type="text" class="Ist_30 Ist_l" id="addcam_time" check="time" value="';
+$out+=$escape(list.passportInvalidTm);
+$out+='"> <span class="C_1 vm">*</span> <span>(例如:2017-12-12)</span> </div> </div> <div class="fix fa mb20"> <div class="l pct30 tr"> &nbsp; </div> <div class="cell"> <a class="Btn_blue Btn_40" id="myform1" data-id="';
+$out+=$escape(list.id);
+$out+='"> 保存修改 </a> <a href="account_camper.html" class="Btn_green Btn_40"> 返回 </a> </div> </div> </form> <div id="Downlistdown1" class="DownlistWarp"> <div class="Downlist_link Downlist_link_on">中国</div> <div class="Downlist_link">新加坡</div> <div class="Downlist_link">韩国</div> <div class="Downlist_link">美国</div> <div class="Downlist_link">加拿大</div> <div class="Downlist_link">英国</div> </div>';
+return new String($out);
+});

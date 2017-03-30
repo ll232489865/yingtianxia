@@ -1,0 +1,25 @@
+<div class="fix fa mb20">
+        <div class="l pct30 tr">
+            <span class="Ist_tt">
+                    手机 :
+            </span>
+        </div>
+        <div class="cell">
+            {{mobile}}  
+        </div>
+    </div>
+    <div class="fix fa mb20">
+        <div class="l pct30 tr">
+            <span class="Ist_tt">
+                E-mail :
+            </span>
+        </div>
+        <div class="cell">
+            {{if !!email}}
+                [{{email}}]
+            {{else}}
+                没有绑定邮箱
+            {{/if}} 
+            <a href="javascript:" class="C_3">绑定或更改邮箱</a>
+        </div>
+    </div>

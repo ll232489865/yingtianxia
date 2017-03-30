@@ -1,0 +1,2 @@
+/*TMODJS:{"version":2,"md5":"b3e2eb69c04d736ab14a2547fa472220"}*/
+template('header2','<div class="Constr"> <div class="fix" style="line-height: 100px;"> <div class="l"> <span class="Dib_vm"></span> <a href="index.html"> <img src="images/logo.png" alt="" height="80" class="vm"> </a> </div> <div class="r"> <span class="Dib_vm"></span> <img src="css/img/top-tel.png" alt="" class="vm"> </div> </div> </div>');

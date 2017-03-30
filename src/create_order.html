@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"  class="Header1">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<link rel="stylesheet" href="css/include/base.css">
+<link rel="stylesheet" href="css/include/public.css">
+<link rel="stylesheet" href="css/include/style.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/module/page.css">
+<link rel="stylesheet" href="css/module/tab.css">
+<body>
+<div id="header" style="z-index: 10; position: relative"></div>
+
+<!--pay-process-->
+<div class="Constr">
+    <div class="PayPro_area">
+        <div class="PayPro_line">
+            <div class="PayPro_item PayPro_step1 PayPro_on">
+                <div class="PayPro_tt">
+                    确认订单
+                </div>
+            </div>  
+            <div class="PayPro_item PayPro_step2">
+                <div class="PayPro_tt">
+                    支付
+                </div>
+            </div>
+            <div class="PayPro_item PayPro_step3">
+                <div class="PayPro_tt">
+                    填写报名表
+                </div>
+            </div>
+            <div class="PayPro_item PayPro_step4">
+                <div class="PayPro_tt">
+                    出发！
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <div class="pct66 auto">
+        <div class="Line_solid mt30 mb30"></div> 
+        <div>
+        <h1>
+            订单信息
+        </h1>
+        <div class="mt20 fix" id="createorder" data-module="createorder">
+        </div>
+        </div>
+        <div class="Line_solid mt30 mb30"></div>
+        <div>
+            <h1>
+                联系人信息 : 
+            </h1>
+            <form id="myform" method="post" data-rel="myform1">
+            <ul class="pct66 auto" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #999">
+                <li class="mt10">
+                    &emsp;联系人 : <input type="text" class="Ist_35 Ist_l" id="orderName"> 
+                </li>
+                <li class="mt10">
+                    联系电话 : <input type="text" class="Ist_35 Ist_l" check='mobile' id="orderMobile"><span class="C_1">*</span>
+                </li>
+                <li class="mt10">
+                    &emsp;&emsp;备注 :  <textarea name="" cols="30" rows="5" id="orderTips" class="Textarea Ist_l"></textarea>
+                </li>
+            </ul>
+            </form>
+        </div>
+        <div class="Line_solid mt30 mb30"></div> 
+        <div>
+        <h1>
+            支付方式
+        </h1>
+        <ul class="fix Tab_hor_area mt10">
+            <li class="Tab Tab_hor Tab_hor_on" data-rel="Tab_hor_1">
+                <span class="Tab_hor_inner">&emsp;&emsp;&emsp;&emsp;支付宝&emsp;&emsp;&emsp;&emsp;</span>
+            </li>
+        </ul>
+        <div class="fix Panel mt-1" id="Tab_hor_1" >
+            <div class="Panel_body p20">
+                <div class="flx">
+                    <div class="l">
+                        <div>
+                            <img src="css/img/alipay-radio.png" alt="" class="vm">
+                            <img src="css/img/alipay.jpg" alt="" class="vm">
+                        </div>
+                        
+                    </div>
+                    <div class="cell">
+                        <div>
+                            快捷支付：信用卡单笔限额最高 
+                            <span class="C_1">5万</span>，
+                            储蓄卡单笔限额 
+                            <span class="C_1">万</span2，
+                            如果超过限额 
+                            <span class="C_1">2万</span，
+                            如果超过限额请选择网银支付
+                            <img src="css/img/alipay.jpg" alt="">
+                        </div>
+                        <div class="mt10">
+                            <img src="css/img/alipay-check.png" alt="" class="vm" >
+                            信用卡支付 &nbsp;
+                            <img src="css/img/alipay-check.png" alt="" class="vm">
+                            储蓄卡支付 &nbsp;
+                            <img src="css/img/alipay-check.png" alt="" class="vm">
+                            快捷支付 &nbsp;
+                            <img src="css/img/alipay-check.png" alt="" class="vm"> 
+                            余额宝支付
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    
+     <div class="Line_solid mt30 mb30"></div>
+    <div class="pct50 auto fa" style="margin-bottom: 100px;">
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+            <span  class="Btn_blue Btn_40 mr20" id="myform1">确认支付</span> 
+            <a href="detail.html" class="Btn_gray Btn_40">&emsp;返回&emsp;</a> 
+    </div>
+</div>
+<div id="pay_success">
+  <form id="alipaysubmit" name="alipaysubmit" action="https://mapi.alipay.com/gateway.do?" _input_charset="utf-8" method="get">
+  <input type="hidden" name="subject" value="报名活动"/><input type="hidden" name="_input_charset" value="utf-8"/>
+  <input type="hidden" name="sign" value="goovdFJnnTjEGQCH4Xq5ygKbkgAUrwkoZUPilm3liopyCjHCmHVtAtyMpc2rNqb9XSgxgy2Wwr/Tu/uvqPGHeH2GLT1i33bwTSMoBp0R7R06oJ+Kf/YtllV/1RMRCA9sCBo4QA4+dyk8nzgnYt3xwp6xXh39aSY2Bspa14uOnUI="/><input type="hidden" name="body" value="报名活动actvPeriodId=14"/><input type="hidden" name="notify_url" value="http://dev.istudy.mobi:9090/callback/pay/alipay/enroll"/>
+  <input type="hidden" name="payment_type" value="1"/><input type="hidden" name="out_trade_no" value="201703221831572510002"/>
+  <input type="hidden" name="partner" value="2088811783461924"/><input type="hidden" name="service" value="create_direct_pay_by_user"/>
+  <input type="hidden" name="total_fee" value="300"/>
+  <input type="hidden" name="return_url" value=""/>
+  <input type="hidden" name="sign_type" value="RSA"/>
+  <input type="hidden" name="seller_id" value="2088811783461924"/>
+  <input type='submit' value='submit' style='display:none;'>
+  </form>
+</div>
+<!--pay-process-->
+
+
+<!--footer-->
+<div id="footer"></div>
+<!--footer end-->
+
+
+</body>
+<script data-main="createOrder" src="js/libs/require.js"></script>
+</html>

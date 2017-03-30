@@ -1,0 +1,98 @@
+/**********首页**********/
+/*首页头图前缀banner，前缀bn*/
+.bn{}
+
+/*商品展示 show product,前缀sp*/
+.sp_rect{
+    width: 350px; height: 528px;
+}
+.sp_fill{
+    border: 1px solid #ddd; height: 100%;
+}
+.sp_abs{
+    left:10px; bottom: 10px; width:inherit; width: 330px;
+}
+
+/*商品展示 campsite edacution,前缀sp*/
+.ce_rect{
+    height: 280px; 
+    width: 400px;
+}
+.ce_few{
+    background: #f0f0f0
+}
+/*邮件订阅mail subscription，前缀msp*/
+.msp{}
+
+/**********详情页**********/
+/*购买详情 ，Purchase details ，前缀pd*/
+.pd{}
+
+
+/**********列表页，搜索页**********/
+/*产品筛选product screening，result前缀psr*/
+.psr_box{
+    border: 1px solid #ddd;
+    line-height: 180%;
+    font-size: 14px;
+}
+.psr_tb{
+    background: #f3f3f3; border: 1px solid #ddd;
+    padding: 15px;
+}
+
+
+/**********购物流程**********/
+/*Shopping process,前缀sp*/
+.sp{}
+
+
+/**********MyAccount页--公共前缀MyAccount  mc**********/
+/*希望的列表mc  wish list 简写成mcl*/
+.mcl{}
+
+/*积分页mc_point简写成mcp*/
+.mcp{}
+
+/*MyAccount首页mc_index，简写成mci*/
+.mci{}
+
+/*评论页mc_review，简写成mcr*/
+.mcr{}
+
+/*邮件订阅页面mc_Newsletter Subscription简写成 mcn*/
+.mcn{}
+
+/*订单状态od_state  简写ods*/
+.ods{}
+
+/*订单详情od*/
+.od{}
+
+
+/**********帮助中心页**********/
+/*帮助中心首页help center index 简写hci*/
+.hci{}
+
+/*帮助中心详情页help center detail，简写成hcd*/
+.hcd{}
+
+
+/**********登陆、注册UI**********/
+/*登陆注册使用一个前缀login,regiiest 前缀lr*/
+.lr{}
+
+
+/**********关于注册成功，登陆成功之类的命名**********/
+/*在说明里面已经讲得很清楚了，这些页面用一个前缀来搞定，"注册流程",The registration process，简写成trp*/
+.trp{}
+
+
+/*单精度*/
+.pl13{ padding-left: 13px;}
+.mr-15{ margin-right: -15px;}
+.lh30{ line-height: 30px;}
+.bdb{ border: 1px solid #bbb;}
+
+
+

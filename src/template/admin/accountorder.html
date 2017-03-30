@@ -1,0 +1,61 @@
+    <div class="p20" >
+        <div>
+    <span class="Label_30 Label_blue mr20" data-id="0">
+        全部订单
+    </span>
+    <span class="Label_30 Label_white mr20" data-id="1">
+        待支付订金
+    </span>
+    <span class="Label_30 Label_white mr20" data-id="3">
+         完成订单
+    </span>
+    <span class="Label_30 Label_white mr20" data-id="4">
+        已取消
+    </span>
+</div>
+{{if list.length!=0}} 
+{{each list as value index}}  
+    <div class="mt20">
+        <div>订单编号：<span class="ml5 mr10 C_3">{{value.tn}}</span> 订单创建时间 : {{value.orderTm}}</div>
+
+        <div class="fix mt10" style="border: 1px solid #ddd; padding: 20px;">
+            <div class="l">
+                <div class="f14 b">
+                    {{value.actvNm}}
+                </div>
+                <div class="mt5">
+                    出发时间：{{value.periodNm}}   {{value.startDt}}  共 {{value.days}}天 
+                </div>
+                <div class="mt5">
+                    订单金额：<span class="C_1">￥{{value.amt}}</span> 元   
+                </div>
+            </div>
+            <div class="cell pl20">
+                <div class="tr">
+                    <div class="mt5"></div>
+                    {{if value.status==1}}
+                    <span class="Btn_white Btn_24" data-id="{{value.tn}}">
+                        取消订单
+                    </span>
+                    {{/if}}
+                    {{if value.status==4}}
+                    <span class="Btn_gray Btn_24" data-id="{{value.tn}}">
+                        订单已经取消
+                    </span>
+                    {{/if}}
+                    {{if value.status==3}}
+                    <span class="Btn_gray Btn_24" data-id="{{value.tn}}">
+                        订单已完成
+                    </span>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}     
+{{else}}
+<div style="text-align: center; margin: 50px 0;" class="C_3">
+    没有相关订单
+</div>
+{{/if}} 
+</div>

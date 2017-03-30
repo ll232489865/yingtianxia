@@ -1,0 +1,28 @@
+<div class="l">
+        <a href="create_order.html?id{{list.id}}">
+            <img src="{{list.picUrl}}" width="200"  alt="">
+        </a>
+    </div>
+    <div class="cell pl20">
+        <div class="order_detail fa">
+            <h2>{{list.name}} </h2>
+            <dl class="mt10 f14">
+                <span class="txt">出发日期 : </span>
+                <span class="tit">{{list.other[0].name}} {{list.other[0].startDt}} 共 {{list.other[0].days}} 天 </span>
+            </dl>
+            <dl>
+                <span class="txt">&emsp;&emsp;单价 : </span>
+                <span class="tit">￥{{list.other[0].fee}}</span>
+            </dl>
+            <dl>
+                <span class="txt">数量</span>
+                <span class="tit"> 
+                    <input type="button" value="－" name="computerText1" data-computer="subtraction" class="computerText">
+                    <input type="text" id="computerText1" value="1" readonly="readonly">
+                    <input type="button" value="＋" name="computerText1" data-computer="addition" class="computerText">
+                    <span class="orange tourists" data-val="1">1</span> 人
+                </span>
+            </dl>
+            <dl><span class="txt">合计</span>￥<span class="orange need_topay" id="need_topay" name="need_topay" data-val="7980">{{list.other[0].fee}}</span></dl>
+        </div>
+    </div>

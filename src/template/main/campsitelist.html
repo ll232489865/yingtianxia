@@ -1,0 +1,25 @@
+{{each list as value i}}
+<li style="border: 1px solid #ddd;" class="fix mb20">
+    <div class="l">
+        <a href="campsite_detail.html?id={{value.id}}">
+            <img src="{{value.titlePicUrl}}" width="240" height="150" alt="">
+        </a>
+    </div>
+    <div class="ovh">
+        <div class="p20">
+            <a href="javascript:" class="f16 C_2 tdn">
+                {{value.title}}
+            </a>
+            <div class="mt10">
+                {{value.insrtTmstmp}}
+            </div>
+            <div class="mt10 f14">
+                {{value.artclSum}}
+            </div>
+            <div class="mt10">
+                <a href="campsite_detail.html?id={{value.id}}" class="Btn_blue Btn_30">查看详情</a>
+            </div>
+        </div>
+    </div>
+</li>
+{{/each}}

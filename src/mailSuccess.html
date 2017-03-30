@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style=" width: 40%; margin: 100px auto 0 auto;">
+        <div style="text-align: center" id="success">
+            <img src="css/img/check.png" alt=""> <br>
+            <a href="index.html">你的邮箱地址已经绑定成功，点击到首页</a>
+        </div>
+    </div>
+<script src="js/libs/jquery.min.js"></script>
+<script>
+    function getQueryStringArgs() {
+        var qs = (location.search.length > 0 ? location.search.substring(1) : ""),
+            args = {},
+            items = qs.length ? qs.split("&") : [],
+            item = null,
+            name = null,
+            value = null,
+            parmStr = '?',
+            i = 0,
+            len = items.length;
+   
+        for (i = 0; i < len; i++) {
+            item = items[i].split("=");
+            
+            // decodeURIComponent解码
+            name = decodeURIComponent(item[0]);
+            value = decodeURIComponent(item[1]);
+            parmStr+=decodeURIComponent(item[0]) + '=' + decodeURIComponent(item[1]) + (i==len-1?"":'&')
+            if (name.length) {
+                args[name] = value;
+            }
+        }
+        return {
+            parmObj:args,
+            parmStr:parmStr
+        }
+    } 
+    $.ajax({
+        url:"http://192.168.1.10:8288/pc/mail/check",
+        type:'get',
+        dataTyoe:'json',
+        data:{
+            vcode: getQueryStringArgs().parmObj.vcode
+        }
+        ,
+        success:function(data){
+            if(data.resultCode ==0){
+                $('#success').show()
+            }
+            else{
+                document.write(data.resultMsg);
+            }
+        }
+    })
+</script>
+</body>
+</html>

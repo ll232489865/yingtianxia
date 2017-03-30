@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="Header2">
+<head >
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<link rel="stylesheet" href="css/include/base.css">
+<link rel="stylesheet" href="css/include/public.css">
+<style>
+    .login_bg{
+        width: auto;
+        height: 560px;
+        background: url(css/img/login.jpg) no-repeat center #52c6fc;
+        position: relative;
+    }
+    .login_rect{
+        height: 300px; background: #fff; width: 300px; margin-top: 100px; border: 5px solid  rgba(82,198,242,.3); border-radius:5px;
+    }
+    .w204{ width: 204px;}
+</style>
+<body>
+
+
+<div id="header2" style="z-index: 10; position: relative"></div>
+<div class="login_bg">
+    <div class="Constr">
+        <div class="r login_rect">
+            <div class="p20">
+                <div class="f20 g3">
+                    会员登录
+                </div>
+                <div class="mt20 mb10">
+                    
+                        <img src="css/img/login-inp1.png" alt="" class="vm">
+                    
+                    <input type="text" class="Ist_30 w204" id="login_key">
+                </div>
+                <div class="mt15 mb10">
+                    <img src="css/img/login-inp2.png" alt="" class="vm">
+                    <input type="password" class="Ist_30 w204"  id="login_password">
+                </div>
+                <div class="mt5 tr C_2 mb10">
+                    <a href="register.html" class="C_2">
+                        免费注册
+                    </a>
+                </div>
+                <div style="visibility: hidden; color: red;" id="login_error">
+                    &nbsp;
+                </div>
+                <span class="Btn_green Btn_40 Btn_db" id="login_btn" style="margin-top: 20px;">登 录</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer2"></div>
+
+</body>
+<script data-main="login" src="js/libs/require.js"></script>
+</html>

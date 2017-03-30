@@ -1,0 +1,30 @@
+
+<div class="fix mt20" style="list-style: none;">
+    <div class="Lfilter_tt l">
+        &emsp;&emsp;&emsp;目的地 : 
+    </div>
+    <div class="ovh" id="filteradd"> 
+        
+    </div>
+</div>
+<div class="fix mt10" style="list-style: none;" id="filtername">
+        <div class="Lfilter_tt l">
+        项目主题 : 
+    </div>
+    <div class="ovh" id="Lfilter_address">
+        <a href="javascript:" class="Lfilter_item Lfilter_item_off">不限</a>
+        {{each list as value i}}
+        <a href="javascript:"  class="Lfilter_item">{{value.name}}</a>
+        {{/each}}
+        
+    </div>    
+</div>
+<div class="fix mt10" style="list-style: none">
+        <div class="Lfilter_tt l">
+        搜索项目 : 
+    </div>
+    <div class="ovh">
+        <input type="text" class="Ist_26 Ist_m" placeholder="请输入关键字">
+        <span class="Btn_26 Btn_green" id="filterSch">搜索</span>
+    </div>    
+</div>

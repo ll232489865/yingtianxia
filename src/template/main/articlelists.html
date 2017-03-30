@@ -1,0 +1,60 @@
+<div class="l ce_rect">
+        <div id="ce_slide" class="ce_slide">
+            {{each list.carouselArray as value i}}
+                {{if i==0}}
+                    <a class="bn_img" href="campsite_detail.html?id={{value.id}}" style="background-image: url({{value.titlePicUrl}}); display:block" id="ce_adImage{{i}}"></a>
+                    {{else}}
+                    <a class="bn_img" href="campsite_detail.html?id={{value.id}}" style="background-image: url({{value.titlePicUrl}}); display:none" id="ce_adImage{{i}}"></a>
+                {{/if}}
+            {{/each}}
+
+            <div id="ce_position" class="ce_position">
+                {{each list.carouselArray as value i}}
+                    {{if i==0}}
+                    <a href="javascript:" class="bn_control active" data-rel="ce_adImage{{i}}"></a>
+                    {{else}}
+                    <a href="javascript:" class="bn_control" data-rel="ce_adImage{{i}}"></a>
+                    {{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </div>   
+    <div class="cell pl15">
+        <div class="fix" style="margin-right: -10px;" id="ce_imgarticle">
+            {{each list.imgarticleArray as value i}}
+            <div class="pct50 l">
+                <div class="p10 fix mr10 ce_few">
+                    <a href="campsite_detail.html?id={{value.id}}">
+                        <img src="{{value.titlePicUrl}}" width="120" height="80" alt="" class="l mr10">
+                    </a>
+                    <div class="ovh">
+                        <div class="ell f14">
+                            {{value.title}}
+                        </div>
+                        <div class="mt10 g9" style="height: 32px; overflow: hidden;">
+                            {{value.artclSum}}
+                            
+                        </div>
+                        <div class="mt5">
+                            <a href="campsite_detail.html?id={{value.id}}" class="C_1">[详细]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <ul class="mr10 mt10" id="ce_articlelist">
+            {{each list.articleListArray as value i}}
+            <li class="pct50 l">
+                    <div class="Newsleter_box fix" class="pct50 l">
+                    <div class="r ml10">{{value.insrtTmstmp}}</div>
+                    <div class="ovh ell tl">
+                        <a href="campsite_detail.html?id={{value.id}}">
+                            {{value.title}}
+                        </a>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>

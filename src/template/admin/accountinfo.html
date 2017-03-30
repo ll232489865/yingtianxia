@@ -1,0 +1,87 @@
+<div class="fix fa mb20" id="container">
+    <div class="l pct30 tr">
+        <span class="Ist_tt">
+            头像 : 
+        </span>
+    </div>
+    <div class="cell">
+        <a href="javascript:"  class="dib" id="pickfiles">
+            {{if avatarUrl}}    
+            <img src="{{avatarUrl}}" alt="" class="vt"  width="80" height="80">
+            {{else}}
+            <img src="../css/img/avter.png" alt="" class="vt"  width="80" height="80"> 
+            {{/if}}
+        </a>
+    </div>
+
+</div>
+
+<form id="myform" method="post" data-rel="myform1">
+<div class="fix fa mb20">
+    <div class="l pct30 tr">
+        <span class="Ist_tt">
+            昵称 :
+        </span>
+    </div>
+    <div class="cell">
+        <input type="text" class="Ist_30 Ist_l" id="accountInfo_nik" value="{{nicknm}}"  check="required">
+        <span class="C_1">*</span>
+    </div>
+</div>
+<div class="fix fa mb20">
+    <div class="l pct30 tr">
+        <span class="Ist_tt">
+            姓名 :
+        </span>
+    </div>
+    <div class="cell">
+        <input type="text" class="Ist_30 Ist_l" id="accountInfo_name" value="{{name}}" check="required">
+        <span class="C_1">*</span>
+    </div>
+</div>
+<div class="fix fa mb20">
+    <div class="l pct30 tr">
+        <span class="Ist_tt">
+            电话 :
+        </span>
+    </div>
+    <div class="cell">
+        <input type="text" class="Ist_30 Ist_l" value="{{mobile}}" readonly='readonly'>
+        
+    </div>
+</div>
+<div class="fix fa mb20">
+    <div class="l pct30 tr">
+        <span class="Ist_tt">
+            E-mail :
+        </span>
+    </div>
+    <div class="cell">
+        <input type="text" class="Ist_30 Ist_l" id="accountInfo_email" value="{{email}}">
+        <a href="account_bindinfo.html" class="C_2">更换邮箱或更换邮箱</a >
+    </div>
+</div>
+<div class="fix fa mb20">
+    <div class="l pct30 tr">
+        <span class="Ist_tt">
+            地址 :
+        </span>
+    </div>
+    <div class="cell">
+        <textarea class="Textarea" name=""  cols="42" rows="5" id="accountInfo_add" check="required">
+            {{liveAddr}}
+        </textarea>
+        <span class="C_1">*</span>
+    </div>
+</div>
+<div class="fix fa mb20">
+    <div class="l pct30 tr">
+        <span class="Ist_tt">
+            &nbsp;
+        </span>
+    </div>
+    <div class="cell"  >
+        <span class="Btn_green Btn_40" id="myform1">&emsp;&emsp;保存修改&emsp;&emsp;</span>
+    </div>
+</div>
+</form>
