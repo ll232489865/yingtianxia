@@ -31,7 +31,7 @@ define(['jquery','moduleHtml','accountCommon','adminTemp','vaildate','downlist']
                   template.htmlModule({list:$.extend(data1.result,{passportInvalidTm:new Date(data1.result.passportInvalidTm).Format('yyyy-MM-dd')})},$('#accountaddcmaper')[0],adminTemp);
                   downlist.selectChosen($('.Downlist'));
                    $("#myform").checkForm({},function(flag){
-                        var sexnumb = $('input:radio').filter(function(i){
+                           var sexnumb = $('input:radio').filter(function(i){
                                 return ($(this).attr('name') == 'sex' && $(this)[0].checked)
                             })
                             var typenumb = $('input:radio').filter(function(i){
